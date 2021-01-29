@@ -1,0 +1,24 @@
+{
+  "name": "tackle-tightness",
+  "version": "1.0.0",
+  "description": "Dissertation Web Application ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamRichards3/Tackle-Tightness.git"
+  },
+  "author": "A W Richards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamRichards3/Tackle-Tightness/issues"
+  },
+  "homepage": "https://github.com/AdamRichards3/Tackle-Tightness#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -401,26 +401,10 @@
 
   .body-container{
     display: inline-grid;
-    grid-template-columns: 45rem 45rem;
-    grid-template-rows: 20rem 20rem;
     column-gap: 10px;
     row-gap: 10px;
-  }
-
-  .item1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    padding: 10px;
-  }
-
-  .item2{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    padding: 10px;
+    padding: 15px;
+    width: 100%;
   }
 
   .text-background{
@@ -428,6 +412,6 @@
     color: rgb(240, 236, 12);
     border-radius: 25px;
     padding: 20px;
-    width: 43rem;
-    height: 17rem;
+    width: 100%;
+    height: 25rem;
   }

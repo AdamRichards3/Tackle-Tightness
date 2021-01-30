@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /* CORE STYLES */
 :root {
-    --primary-color: rgba(13, 110, 139, 0.75);
-    --overlay-color: rgba(24, 39, 51 , 0.85);
+    --primary-color: rgba(46, 46, 44, 0.692);
+    --overlay-color: rgb(46, 47, 48);
     --menu-speed: 0.75s;
   }
   
@@ -15,6 +15,7 @@
   body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
+    background-color: rgb(153, 152, 153);
   }
   
   .container {
@@ -26,7 +27,7 @@
   
   .background {
     background: var(--primary-color);
-    color: #fff;
+    color: rgb(240, 236, 12);
     height: 100vh;
     position: relative;
   }
@@ -63,7 +64,7 @@
     display: inline-block;
     border: none;
     background: var(--primary-color);
-    color: #fff;
+    color: rgb(240, 236, 12);
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
     transition: opacity 1s ease-in-out;
@@ -113,7 +114,7 @@
     flex: none;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: rgb(240, 236, 12);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,7 +206,7 @@
   
   .menu-wrap .menu > div > div > ul > li {
     list-style: none;
-    color: #fff;
+    color: rgb(240, 236, 12);
     font-size: 1.5rem;
     padding: 1rem;
   }
@@ -245,7 +246,7 @@
     display: inline-block;
     border: none;
     background: var(--primary-color);
-    color: #fff;
+    color: rgb(240, 236, 12);
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
     transition: opacity 1s ease-in-out;
@@ -295,7 +296,7 @@
     flex: none;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: rgb(240, 236, 12);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -387,7 +388,7 @@
   
   .menu-wrap .menu > div > div > ul > li {
     list-style: none;
-    color: #fff;
+    color: rgb(240, 236, 12);
     font-size: 1.5rem;
     padding: 1rem;
   }
@@ -398,3 +399,35 @@
     transition: color 0.4s ease;
   }
 
+  .body-container{
+    display: inline-grid;
+    grid-template-columns: 45rem 45rem;
+    grid-template-rows: 20rem 20rem;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .item1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    padding: 10px;
+  }
+
+  .item2{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding: 10px;
+  }
+
+  .text-background{
+    background-color: rgb(46, 47, 48);
+    color: rgb(240, 236, 12);
+    border-radius: 25px;
+    padding: 20px;
+    width: 43rem;
+    height: 17rem;
+  }

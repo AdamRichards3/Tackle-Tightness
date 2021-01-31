@@ -431,3 +431,9 @@
     width: 43rem;
     height: 17rem;
   }
+
+  .text-background p{
+    padding: 10px;
+    padding-top: 30px;
+    color: rgb(255, 253, 112);
+  }

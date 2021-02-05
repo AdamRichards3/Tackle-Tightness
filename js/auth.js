@@ -1,14 +1,37 @@
 function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  const profile = googleUser.getBasicProfile();
+  const el = document.getElementById('greeting');
+  el.textContent = '– Hello ' + profile.getName() + '!';
+
+  setTimeout(callServer, 100);
+}
+async function signOut() {
+  await gapi.auth2.getAuthInstance().signOut();
+  console.log('User signed out.');
+  const el = document.getElementById('greeting');
+  el.textContent = 'Bye!';
+}
+
+async function callServer() {
+  const token = gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().id_token;
+
+  const el = document.getElementById('server-response');
+  el.textContent = 'loading…';
+
+  const fetchOptions = {
+    credentials: 'same-origin',
+    method: 'GET',
+    headers: { 'Authorization': 'Bearer ' + token },
+  };
+  const response = await fetch('/api/hello', fetchOptions);
+  if (!response.ok) {
+    // handle the error
+    el.textContent = "Server error:\n" + response.status;
+    return;
   }
 
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
+  // handle the response
+  const data = await response.text();
+  console.log('setting text content: ' + data);
+  el.textContent = data;
+}

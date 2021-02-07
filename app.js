@@ -1,7 +1,7 @@
 'use strict'
 // This make sure express is installed 
 const express = require('express');
-const GoogleAuth = require('simple-google-openid');
+// const GoogleAuth = require('simple-google-openid');
 const mysql = require('mysql');
 
 const app = express();
@@ -27,12 +27,20 @@ app.use(function (err, req, res, next){
 
 const connection = mysql.createConnection({
     host : 'localhost',
+    // port : '8080',
     user : 'root',
-    password : 'arisofT310',
-    database : 'tackle-tightness'
+    password : 'password',
+    database : 'exercises'
 });
 
-connection.connect();
+connection.connect((err) => {
+    if (!err) {
+        console.log('Connected');
+    }
+    else {
+        console.log('Error connecting');
+    } 
+});
 
 app.use(GoogleAuth('1061299997929-s6ts70cla6voe6g6k31pdp0oj6hrfhll.apps.googleusercontent.com'));
 

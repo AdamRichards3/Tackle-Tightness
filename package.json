@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AdamRichards3/Tackle-Tightness#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.7",
     "simple-google-openid": "^0.3.2"
   }

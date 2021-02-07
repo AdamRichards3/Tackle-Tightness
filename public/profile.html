@@ -35,8 +35,12 @@
       </header>
       <div class="body-container">
         <div class="item1">
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
-      <a href="#" onclick="signOut();">Sign out</a>
+          <h1>Please Sign In<span id="greeting"></span></h1>
+
+          <p>Press the button below to sign in:</p>
+          <div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50"
+          data-longtitle="true"></div>
+          <p><a href="#" onclick="signOut();">Sign out</a></p>
         </div>
       </div>
     </body>

@@ -25,22 +25,21 @@ app.use(function (err, req, res, next){
     res.status(500).send('An error has occured!')
 });
 
-const connection = mysql.createConnection({
+const mysqlConnection = mysql.createConnection({
     host : 'localhost',
     user : 'root',
-    port : '3306',
     password : 'password',
-    database : 'Exercise'
-});
+    database : 'Exercise',
+    multipleStatements : true
+})
 
-connection.connect((err) => {
-    if (!err) {
-        console.log('Connected');
+mysqlConnection.connect((err) => {
+    if(err)
+    {
+        console.log(err.message)
     }
-    else {
-        console.log('Error connecting');
-    } 
-});
+    console.log('Database ' + mysqlConnection.state);
+})
 
 app.use(GoogleAuth('1061299997929-s6ts70cla6voe6g6k31pdp0oj6hrfhll.apps.googleusercontent.com'));
 

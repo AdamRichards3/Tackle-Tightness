@@ -24,3 +24,11 @@ This is my web application called Tackle Tightness. It is application that I am 
 - [] insert data into database 
 - [] get routes through API 
 - [] display data on the exercise page
+
+## How to start the applcation
+
+- First you will need to `git clone` the repository 
+- Once you have done that, you will need to cd do the repository 
+- In the repository you will need to enter `npm install`
+- Now you can type `npm start`
+- Finally go to http://localhost:8080

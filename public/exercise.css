@@ -416,6 +416,7 @@
     color: rgb(240, 236, 12);
     font-size: 15px;
     border-radius: 10px;
+    padding-right: 15px;
   }
 
   .text-background h1{
@@ -424,4 +425,14 @@
 
   .title{
     padding-right: 20px;
+  }
+
+  .submit{
+    background-color: rgb(85, 85, 85);
+    color: rgb(240, 236, 12);
+    border-radius: 15px;
+  }
+
+  input{
+    padding: 11px;
   }

@@ -25,7 +25,7 @@ This is my web application called Tackle Tightness. It is application that I am 
 - [] get routes through API 
 - [] display data on the exercise page
 
-## How to start the applcation
+## How to start the application
 
 - First you will need to `git clone` the repository 
 - Once you have done that, you will need to cd do the repository 

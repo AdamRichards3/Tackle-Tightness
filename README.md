@@ -1,5 +1,5 @@
 # Tackle-Tightness
-This is my web application called Tackle Tightness. It is application that I am creating for my dissertation
+This is my web application called Tackle Tightness. It is application that I am creating for my dissertation. This applcation will allow rugby player get information about rehabilitation for differnt injuries that they could have. It will give them information on how to perform the exercises. The overall aim of this project is to reduce the chance of player retiering from rugby.
 
 ## To-do List 
 

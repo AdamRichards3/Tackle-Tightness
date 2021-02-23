@@ -10,7 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 // Folders express needs to see
 app.use(express.static('public'));
-app.use(express.static('js'));
+app.use(express.static('public/js'));
+app.use(express.static(__dirname));
 // Tells express what port to listne to 
 app.listen(PORT, (err) => {
     console.log(`App listening on http://localhost:${PORT}`);
@@ -18,11 +19,6 @@ app.listen(PORT, (err) => {
 // Makes a get request to the index.html file
 app.get('/', function (req, res) {
     res.sendFile('index.html');
-});
-// This will send a error message if there is status 500 
-app.use(function (err, req, res) {
-    console.log(err.stack)
-    res.status(500).send('An error has occured!')
 });
 
 // The google client code 
@@ -35,7 +31,7 @@ app.use('/api', GoogleAuth.guardMiddleware());
 //     console.log('successful authenticated request by ' + req.user.emails[0].value);
 // });
 
-app.get('/api/hello', (req, res) => {
+app.get('/loadList', (req, res) => {
     res.send('Hello');
     console.log('successful authenticated request by ' + req.user.emails[0].value);
 });

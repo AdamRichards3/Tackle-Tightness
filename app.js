@@ -35,3 +35,13 @@ app.get('/loadList', (req, res) => {
     res.send('Hello');
     console.log('successful authenticated request by ' + req.user.emails[0].value);
 });
+
+app.get('/loadExercises', (req,res) => {
+
+    if (res.searchType == " "){
+        db.query("SELECT * from exersices WHERE exercise_id=201")
+    }
+    else if (res.searchType == " "){
+        db.query(" SELECT * from exersices WHERE exercise_id=202")
+    }
+});

@@ -38,10 +38,16 @@ app.get('/loadList', (req, res) => {
 
 app.get('/loadExercises', (req,res) => {
 
-    if (res.searchType == " "){
-        db.query("SELECT * from exersices WHERE exercise_id=201")
+    if (res.searchType == "Pulled Hamstring"){
+        db.query("SELECT * from exersices WHERE injury_id=201")
     }
-    else if (res.searchType == " "){
-        db.query(" SELECT * from exersices WHERE exercise_id=202")
+    else if (res.searchType == "Dislocated shoulder"){
+        db.query("SELECT * from exersices WHERE injury_id=202")
+    }
+    else if (res.searchType == "Twisted Knee"){
+        db.query("SELECT * from exersices WHERE injury_id=203")
+    }
+    else if (res.searchType == "Twisted Ankle"){
+        db.query("SELECT * from exersices WHERE injury_id=204")
     }
 });

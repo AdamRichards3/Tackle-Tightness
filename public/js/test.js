@@ -10,5 +10,5 @@ async function test(){
       };
     
     let response = await fetch('/loadList', fetchOptions);
-    console.log( await response.text());
+    console.log(await response.text());
 }

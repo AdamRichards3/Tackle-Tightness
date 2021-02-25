@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static('public'));
 app.use(express.static('public/js'));
 app.use(express.static(__dirname));
-// Tells express what port to listne to 
+// Tells express what port to listen to 
 app.listen(PORT, (err) => {
     console.log(`App listening on http://localhost:${PORT}`);
 });

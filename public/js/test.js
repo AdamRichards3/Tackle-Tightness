@@ -9,6 +9,6 @@ async function test(){
         method: 'GET'
       };
     
-    let response = await fetch('/loadList', fetchOptions);
+    let response = await fetch('/loadExercises', fetchOptions);
     console.log(await response.text());
 }

@@ -26,15 +26,15 @@ app.use(GoogleAuth('1061299997929-s6ts70cla6voe6g6k31pdp0oj6hrfhll.apps.googleus
 // installs the google auth middle ware
 app.use('/api', GoogleAuth.guardMiddleware());
 // Will display the users information
-// app.get('/api/hello', (req, res) => {
-//     res.send('Hello ' + (req.user.displayName || 'user without a name') + '!');
-//     console.log('successful authenticated request by ' + req.user.emails[0].value);
-// });
-
-app.get('/loadList', (req, res) => {
-    res.send('Hello');
+app.get('/api/hello', (req, res) => {
+    res.send('Hello ' + (req.user.displayName || 'user without a name') + '!');
     console.log('successful authenticated request by ' + req.user.emails[0].value);
 });
+
+// app.get('/loadList', (req, res) => {
+//     res.send('Hello');
+//     console.log('successful authenticated request by ' + req.user.emails[0].value);
+// });
 
 app.get('/loadExercises', (req,res) => {
 

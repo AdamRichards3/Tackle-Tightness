@@ -1,7 +1,7 @@
 function onSignIn(googleUser) {
   const profile = googleUser.getBasicProfile();
   const el = document.getElementById('greeting');
-  el.textContent = '– Hello ' + profile.getName() + '!';
+  el.textContent = 'Hello ' + profile.getName() + '!';
 
   setTimeout(callServer, 100);
 }
@@ -16,7 +16,8 @@ async function callServer() {
   const token = gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().id_token;
 
   const el = document.getElementById('server-response');
-  el.textContent = 'loading…';
+  // el.textContent = 'loading…';
+  
 
   const fetchOptions = {
     credentials: 'same-origin',

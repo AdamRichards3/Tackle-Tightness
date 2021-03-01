@@ -1,9 +1,5 @@
-window.onload = function(){
-  console.log("loaded");
-  test();
-}
 
-async function test(){
+async function fetch(){
     console.log("test");
     const fetchOptions = {
         method: 'GET'
@@ -11,4 +7,9 @@ async function test(){
     
     let response = await fetch('/loadExercises', fetchOptions);
     console.log(await response.text());
+}
+
+window.onload = function(){
+  console.log("loaded");
+  fetch();
 }

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 /* CORE STYLES */
 :root {
     --primary-color: rgba(46, 46, 44, 0.692);
@@ -10,10 +11,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   
   body {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     line-height: 1.4;
     background-color: rgb(153, 152, 153);
   }

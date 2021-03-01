@@ -11,5 +11,10 @@ async function fetch(){
 
 window.onload = function(){
   console.log("loaded");
-  fetch();
+  let metaData = document.querySelector('loadExersices');
+  console.log(metaData);
+
+  if(metaData == 'exerscise'){
+    displayExersice();
+  }
 }

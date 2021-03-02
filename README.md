@@ -19,10 +19,11 @@ This is my web application called Tackle Tightness. It is application that I am 
 - [✅] setup express 
 - [✅] set up MySQL
 - [✅] download Mysql workbench
-- [] desgin database 
-- [] implement database in workbench
-- [] insert data into database 
-- [] get routes through API 
+- [✅] desgin database 
+- [✅] implement database in workbench
+- [✅] insert data into database 
+- [✅] get routes through API 
+- [✅] Get the drop down options value
 - [] display data on the exercise page
 
 ## How to start the application

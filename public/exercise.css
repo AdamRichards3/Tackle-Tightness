@@ -431,6 +431,8 @@
     background-color: rgb(85, 85, 85);
     color: rgb(240, 236, 12);
     border-radius: 15px;
+    height: 40px;
+    width: 70px;
   }
 
   input{

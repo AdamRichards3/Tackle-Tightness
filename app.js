@@ -38,32 +38,29 @@ app.get('/api/hello', (req, res) => {
 //     console.log('successful authenticated request by ' + req.user.emails[0].value);
 // });
 
-app.get('/loadExercises/:id', (req,res) => {
+app.get('/loadExercises/:id', (req, res) => {
     res.status(200);
     console.log(req.params.id);
-    if (req.params.id == "Pulled_Hamstring"){
-        db.query("SELECT * from exercise.exercises WHERE injury_id=201", function (err, result, fields) {
+    if (req.params.id == "pulledHamstring") {
+        db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=201", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
-          });
-    }
-    else if (req.params.id == "Dislocated_shoulder"){
-        db.query("SELECT * from exercise.exercises WHERE injury_id=202", function (err, result, fields) {
+        });
+    } else if (req.params.id == "dislocatedShoulder") {
+        db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=202", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
-          });
-    }
-    else if (req.searchType == "Twisted Knee"){
-        db.query("SELECT * from exercise.exercises WHERE injury_id=203", function (err, result, fields) {
+        });
+    } else if (req.params.id == "twistedKnee") {
+        db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=203", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
-          });
-    }
-    else if (req.searchType == "Twisted Ankle"){
-        db.query("SELECT * from exercise.exercises WHERE injury_id=204", function (err, result, fields) {
+        });
+    } else if (req.params.id == "twistedAnkle") {
+        db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=204", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
-          });
+        });
     }
     console.log(req);
 });
@@ -73,7 +70,7 @@ app.post('/post-test', (req, res) => {
     db.query("SELECT * FROM exercise.exercises", function (err, result, fields) {
         if (err) throw err;
         console.log(result);
-      });
+    });
     // res.sendStatus(200);
     res.send("successful");
 });

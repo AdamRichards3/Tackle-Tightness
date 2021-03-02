@@ -4,6 +4,7 @@ const express = require('express'),
     GoogleAuth = require('simple-google-openid'),
     mysql = require('mysql'),
     db = require('./public/js/db.js');
+
 // Calls express to be used
 const app = express();
 // States what the port is, can also be stored in a .env file
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static('public'));
 app.use(express.static('public/js'));
 app.use(express.static(__dirname));
+app.use(express.json());
 // Tells express what port to listen to 
 app.listen(PORT, (err) => {
     console.log(`App listening on http://localhost:${PORT}`);
@@ -36,18 +38,42 @@ app.get('/api/hello', (req, res) => {
 //     console.log('successful authenticated request by ' + req.user.emails[0].value);
 // });
 
-app.get('/loadExercises', (req,res) => {
+app.get('/loadExercises/:id', (req,res) => {
+    res.status(200);
+    console.log(req.params.id);
+    if (req.params.id == "Pulled_Hamstring"){
+        db.query("SELECT * from exercise.exercises WHERE injury_id=201", function (err, result, fields) {
+            if (err) throw err;
+            console.log(result);
+          });
+    }
+    else if (req.params.id == "Dislocated_shoulder"){
+        db.query("SELECT * from exercise.exercises WHERE injury_id=202", function (err, result, fields) {
+            if (err) throw err;
+            console.log(result);
+          });
+    }
+    else if (req.searchType == "Twisted Knee"){
+        db.query("SELECT * from exercise.exercises WHERE injury_id=203", function (err, result, fields) {
+            if (err) throw err;
+            console.log(result);
+          });
+    }
+    else if (req.searchType == "Twisted Ankle"){
+        db.query("SELECT * from exercise.exercises WHERE injury_id=204", function (err, result, fields) {
+            if (err) throw err;
+            console.log(result);
+          });
+    }
+    console.log(req);
+});
 
-    if (res.searchType == "Pulled Hamstring"){
-        db.query("SELECT * from exersices WHERE injury_id=201")
-    }
-    else if (res.searchType == "Dislocated shoulder"){
-        db.query("SELECT * from exersices WHERE injury_id=202")
-    }
-    else if (res.searchType == "Twisted Knee"){
-        db.query("SELECT * from exersices WHERE injury_id=203")
-    }
-    else if (res.searchType == "Twisted Ankle"){
-        db.query("SELECT * from exersices WHERE injury_id=204")
-    }
+app.post('/post-test', (req, res) => {
+    console.log('got body:', req.body);
+    db.query("SELECT * FROM exercise.exercises", function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+      });
+    // res.sendStatus(200);
+    res.send("successful");
 });

@@ -16,3 +16,5 @@ mysqlConnection.connect((err) => {
     }
     console.log('Database ' + mysqlConnection.state);
 })
+
+module.exports = mysqlConnection;

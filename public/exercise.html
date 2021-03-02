@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="exercise.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <title>Exercise Page</title>
+  <script src="js/fetch.js"></script>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
     <div class="item1">
       <div class="text-background">
         <h1>Exercises</h1>
-        <form>
+        <div>
         <label class="title" for="exercises">Please select an injury</label>
 
         <select name="exercises" id="dropDown">
@@ -47,10 +48,9 @@
           <option value="dislocatedShoulder">Dislocated Shoulder</option>
           <option value="twistedKnee">Twisted Knee</option>
           <option value="twisedAnkle">Twisted Ankle</option>
-
-          <input class="submit" type="submit">
         </select>
-        </form>
+        <button class="submit">Submit</button>
+      </div>
       </div>
     </div>
   </div>

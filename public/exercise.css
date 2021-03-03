@@ -401,6 +401,7 @@
   }
 
   .text-background{
+    display: inline-block;
     background-color: rgb(46, 47, 48);
     color: rgb(240, 236, 12);
     border-radius: 25px;
@@ -437,4 +438,21 @@
 
   input{
     padding: 11px;
+  }
+
+  .float-container{
+    border: 3px solid #fff;
+    padding: 20px;
+  }
+
+  .exercise-float{
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+  }
+
+  .exercise-description{
+    display: block;
+    position: right;
   }

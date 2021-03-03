@@ -33,11 +33,6 @@ app.get('/api/hello', (req, res) => {
     console.log('successful authenticated request by ' + req.user.emails[0].value);
 });
 
-// app.get('/loadList', (req, res) => {
-//     res.send('Hello');
-//     console.log('successful authenticated request by ' + req.user.emails[0].value);
-// });
-
 app.get('/loadExercises/:id', (req, res) => {
     res.status(200);
     console.log(req.params.id);
@@ -45,32 +40,26 @@ app.get('/loadExercises/:id', (req, res) => {
         db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=201", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
+            res.send(result);
         });
     } else if (req.params.id == "dislocatedShoulder") {
         db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=202", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
+            res.send(result);
         });
     } else if (req.params.id == "twistedKnee") {
         db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=203", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
+            res.send(result);
         });
     } else if (req.params.id == "twistedAnkle") {
         db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=204", function (err, result, fields) {
             if (err) throw err;
             console.log(result);
+            res.send(result);
         });
     }
     console.log(req);
-});
-
-app.post('/post-test', (req, res) => {
-    console.log('got body:', req.body);
-    db.query("SELECT * FROM exercise.exercises", function (err, result, fields) {
-        if (err) throw err;
-        console.log(result);
-    });
-    // res.sendStatus(200);
-    res.send("successful");
 });

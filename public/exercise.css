@@ -440,19 +440,42 @@
     padding: 11px;
   }
 
-  .float-container{
-    border: 3px solid #fff;
+  .exercise-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: rgb(46, 47, 48);
     padding: 20px;
+    border-radius: 20px;
   }
 
-  .exercise-float{
-    width: 50%;
-    float: left;
-    padding: 20px;
-    border: 2px solid red;
+  .exercise-name{
+    color: rgb(240, 236, 12);
   }
 
   .exercise-description{
-    display: block;
-    position: right;
+    color: rgb(240, 236, 12);
+  }
+  
+  .name{
+    color: rgb(240, 236, 12);
+    font-size: 25px;
+  }
+
+  .description{
+    color: rgb(240, 236, 12);
+    font-size: 25px;
+  }
+  .name p{
+    color: rgb(240, 236, 12);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 17px;
+  }
+
+  .description p{
+    color: rgb(240, 236, 12);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
   }

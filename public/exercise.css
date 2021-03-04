@@ -465,18 +465,6 @@
 
   .exercise-description{
     color: rgb(240, 236, 12);
-    font-size: 25px;
-  }
-  .exercise-name p{
-    color: rgb(240, 236, 12);
-    padding-top: 15px;
-    padding-bottom: 40px;
-    font-size: 17px;
+    font-size: 15px;
   }
 
-  .exercise-description p{
-    color: rgb(240, 236, 12);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 17px;
-  }

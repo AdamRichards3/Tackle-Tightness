@@ -39,12 +39,12 @@ async function getData(){
     parentEle.className = "exercise-result";
     console.log(parentEle);
     
-    const name = document.createElement('h2');
+    const name = document.createElement('div');
     name.className = "exercise-name";
     name.textContent = loadExercises[i].exercise_name;
     parentEle.appendChild(name);
     
-    const description = document.createElement('h2');
+    const description = document.createElement('div');
     description.textContent = loadExercises[i].exercise_description;
     description.className = "exercise-description";
     parentEle.appendChild(description);

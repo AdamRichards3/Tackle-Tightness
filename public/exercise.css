@@ -447,6 +447,7 @@
     background-color: rgb(46, 47, 48);
     padding: 20px;
     border-radius: 20px;
+    margin-top: 20px;
   }
 
   .exercise-name{
@@ -457,23 +458,23 @@
     color: rgb(240, 236, 12);
   }
   
-  .name{
+  .exercise-name{
     color: rgb(240, 236, 12);
     font-size: 25px;
   }
 
-  .description{
+  .exercise-description{
     color: rgb(240, 236, 12);
     font-size: 25px;
   }
-  .name p{
+  .exercise-name p{
     color: rgb(240, 236, 12);
     padding-top: 15px;
     padding-bottom: 40px;
     font-size: 17px;
   }
 
-  .description p{
+  .exercise-description p{
     color: rgb(240, 236, 12);
     padding-top: 10px;
     padding-bottom: 10px;

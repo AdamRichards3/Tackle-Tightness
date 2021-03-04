@@ -1,4 +1,5 @@
  'use strict'
+ // This will pull the data from the database when the users presses the submit button
  async function searchHandler() {
   clearSearchResult();
   let userInput = document.getElementById("dropDown").value;
@@ -11,7 +12,7 @@
   console.log(await getExercises.text());
   getData();
 }
-
+// This function is used to display the data from the database 
 async function displayExercises(){
   let userInput = document.getElementById("dropDown").value;
 
@@ -25,7 +26,7 @@ async function displayExercises(){
 
   return test;
 }
-
+// This function will get the data from the json loop through it and return all the exersises and names
 async function getData(){
   const loadExercises = await displayExercises();
   console.log(loadExercises)
@@ -52,7 +53,7 @@ async function getData(){
     gridEle.appendChild(parentEle);
   }
 }
-
+// This function will allow the user to press the clear button and clear the previous search
 function clearSearchResult(){
   let parentEle = document.getElementById("exercise-grid");
   let childrenEle = parentEle.querySelectorAll(".exercise-result");
@@ -64,7 +65,7 @@ function clearSearchResult(){
   }
 }
 
-
+// This on load function will make sure that when the pages loads the button will work
 window.onload = function () {
   document.getElementsByClassName("submit")[0].addEventListener("click", searchHandler);
   document.getElementsByClassName("clear")[0].addEventListener("click", clearSearchResult);

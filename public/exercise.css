@@ -440,7 +440,7 @@
     padding: 11px;
   }
 
-  .exercise-grid{
+  #exercise-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -469,7 +469,7 @@
   .name p{
     color: rgb(240, 236, 12);
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 40px;
     font-size: 17px;
   }
 

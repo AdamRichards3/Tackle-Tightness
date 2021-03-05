@@ -9,7 +9,6 @@
   };
 
   let getExercises = await fetch('/loadExercises/' + userInput, options);
-  console.log(await getExercises.text());
   getData();
 }
 // This function is used to display the data from the database 
@@ -22,15 +21,12 @@ async function displayExercises(){
 
   let fetchExercises = await fetch('/loadExercises/' + userInput, options);
   let test = await fetchExercises.json();
-  console.log(test);
 
   return test;
 }
 // This function will get the data from the json loop through it and return all the exersises and names
 async function getData(){
   const loadExercises = await displayExercises();
-  console.log(loadExercises)
-  console.log(loadExercises[1]);
 
   const gridEle = document.getElementById('exercise-grid');
 
@@ -38,7 +34,6 @@ async function getData(){
 
     let parentEle = document.createElement("div");
     parentEle.className = "exercise-result";
-    console.log(parentEle);
     
     const name = document.createElement('div');
     name.className = "exercise-name";
@@ -58,8 +53,6 @@ function clearSearchResult(){
   let parentEle = document.getElementById("exercise-grid");
   let childrenEle = parentEle.querySelectorAll(".exercise-result");
 
-  console.log(parentEle);
-  console.log(childrenEle);
   for(let i =0; i < childrenEle.length; i++){
       parentEle.removeChild(childrenEle[i]);
   }

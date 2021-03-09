@@ -109,6 +109,20 @@
     align-items: center;
     justify-content: center;
   }
+
+  .menu-wrap .profile {
+    position: absolute;
+    top: 0;
+    left: 4;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   /* Hamburger Line */
   .menu-wrap .burger > div {
@@ -398,8 +412,7 @@
     display: inline-grid;
     grid-template-columns:  50% 50%;
     grid-template-rows: 70% 70%;
-    column-gap: 10px;
-    row-gap: 10px;
+    row-gap: 5px;
   }
 
   .item1{

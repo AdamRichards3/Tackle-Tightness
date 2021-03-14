@@ -60,6 +60,12 @@ app.get('/loadExercises/:id', (req, res) => {
             console.log(result);
             res.send(result);
         });
-    }
+    } else if (req.params.id == "acl") {
+        db.query("SELECT exercise_name, exercise_description FROM exercise.exercises WHERE injury_id=205", function (err, result, fields) {
+            if (err) throw err;
+            console.log(result);
+            res.send(result);
+        });
+    } 
     console.log(req);
 });

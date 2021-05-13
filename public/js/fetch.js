@@ -2,13 +2,6 @@
  // This will pull the data from the database when the users presses the submit button
  async function searchHandler() {
   clearSearchResult();
-  let userInput = document.getElementById("dropDown").value;
-
-  const options = {
-    method: 'GET'
-  };
-
-  let getExercises = await fetch('/loadExercises/' + userInput, options);
   getData();
 }
 // This function is used to display the data from the database 
@@ -18,28 +11,28 @@ async function displayExercises(){
   const options = {
     method: 'GET'
   };
-
+  // This fetches the data from the quieres in the app.js file
   let fetchExercises = await fetch('/loadExercises/' + userInput, options);
-  let test = await fetchExercises.json();
+  let wait = await fetchExercises.json();
 
-  return test;
+  return wait;
 }
 // This function will get the data from the json loop through it and return all the exersises and names
 async function getData(){
   const loadExercises = await displayExercises();
 
   const gridEle = document.getElementById('exercise-grid');
-
+  // This for loop creates the elements which the data will put put inside
   for (let i = 0; i < loadExercises.length; i++){
-
+    //Creates the container which will hold all the data 
     let parentEle = document.createElement("div");
     parentEle.className = "exercise-result";
-    
+    // This creates the element which the exercise name will go in
     const name = document.createElement('div');
     name.className = "exercise-name";
     name.textContent = loadExercises[i].exercise_name;
     parentEle.appendChild(name);
-    
+    // This is the element which the description of the exerscies will go
     const description = document.createElement('div');
     description.textContent = loadExercises[i].exercise_description;
     description.className = "exercise-description";

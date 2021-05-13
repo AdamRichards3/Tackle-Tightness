@@ -14,5 +14,5 @@ mysqlConnection.connect((err) => {
     }
     console.log('Database ' + mysqlConnection.state);
 })
-
+// Exports the code above to access it in the app.js file
 module.exports = mysqlConnection;

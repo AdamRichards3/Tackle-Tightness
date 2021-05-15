@@ -1,8 +1,8 @@
  'use strict'
  // This will pull the data from the database when the users presses the submit button
- async function searchHandler() {
+ async function searchExercises() {
   clearSearchResult();
-  getData();
+  getExercises();
 }
 // This function is used to display the data from the database 
 async function displayExercises(){
@@ -18,7 +18,7 @@ async function displayExercises(){
   return wait;
 }
 // This function will get the data from the json loop through it and return all the exersises and names
-async function getData(){
+async function getExercises(){
   const loadExercises = await displayExercises();
 
   const gridEle = document.getElementById('exercise-grid');
@@ -53,7 +53,7 @@ function clearSearchResult(){
 
 // This on load function will make sure that when the pages loads the button will work
 window.onload = function () {
-  document.getElementsByClassName("submit")[0].addEventListener("click", searchHandler);
+  document.getElementsByClassName("submit")[0].addEventListener("click", searchExercises);
   document.getElementsByClassName("clear")[0].addEventListener("click", clearSearchResult);
   
 }
